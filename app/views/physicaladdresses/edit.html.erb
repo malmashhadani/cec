@@ -1,0 +1,18 @@
+<div style="padding:15px;background:#ccc;">
+	<div class="row">
+		<div class="col-md-12">
+			<h1>Editing physicaladdress</h1>
+		</div>
+	</div>
+
+	<%= render 'form' %>
+
+	<div class="row">
+		<div class="col-md-1">
+			<%= button_to 'Show', @physicaladdress, { :class=> 'btn btn-primary', :method => 'get' } %>
+		</div>
+		<div class="col-md-1">
+			<%= button_to 'Back', physicaladdresses_path, { :class=> 'btn btn-default', :method => 'get' } %>
+		</div>
+	</div>
+</div>

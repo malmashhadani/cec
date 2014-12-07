@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Phyadd:</strong>
+  <%= @physicaladdress.phyadd_id %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @physicaladdress.address %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @physicaladdress.city %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @physicaladdress.state %>
+</p>
+
+<p>
+  <strong>Zipcode:</strong>
+  <%= @physicaladdress.zipcode %>
+</p>
+
+<p>
+  <strong>Project:</strong>
+  <%= @physicaladdress.project_id %>
+</p>
+
+<%= link_to 'Edit', edit_physicaladdress_path(@physicaladdress) %> |
+<%= link_to 'Back', physicaladdresses_path %>

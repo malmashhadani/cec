@@ -1,0 +1,220 @@
+<div style="padding:15px;background:#ccc;">
+  <div class="row">
+    <div class="col-md-12">
+      <%= notice %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <h3>Project_id:</h3>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <%= @project.project_id %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <h3>Name:</h3>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <%= @project.name %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <h3>Description:</h3>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <%= @project.description %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <h3>Objective:</h3>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <%= @project.objective %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <h3>Synopsis:</h3>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <%= @project.synopsis %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <h3>Background:</h3>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <%= @project.background %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <h3>Comment:</h3>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <%= @project.comment %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <h3>Url:</h3>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <%= @project.url %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <h3>Urldescription:</h3>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <%= @project.urldescription %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <h3>Coursenumber:</h3>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <%= @project.coursenumber %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <h3>Coursedepartment:</h3>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <%= @project.coursedepartment %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <h3>Coursenotes:</h3>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <%= @project.coursenotes %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <h3>Picture:</h3>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <%= @project.picture %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <h3>Originator_id:</h3>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <%= @project.originator_id %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <h3>Unit_id:</h3>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <%= @project.unit_id %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <h3>County_id:</h3>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <%= @project.county_id %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <h3>Zipcode_id:</h3>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <%= @project.zipcode_id %>
+    </div>
+  </div>
+
+  <div class="row" style="margin-top:15px;">
+    <div class="col-md-1">
+      <%= button_to 'Edit', edit_project_path(@project), { :class=> 'btn btn-primary', :method => 'get' } %>
+    </div>
+    <div class="col-md-1">
+      <%= button_to 'Back', projects_path, { :class=> 'btn btn-default', :method => 'get' } %>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,39 @@
+<h1>Listing originators</h1>
+
+<div class="row" style="padding:15px;">
+	<div class="col-md-12">
+    <%= button_to 'New Originator', new_originator_path, { :class=> 'btn btn-success', :method => 'get' } %>
+  </div>
+</div>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Originator</th>
+      <th>Name</th>
+      <th>Phonenumber</th>
+      <th>Phonedescription</th>
+      <th>Email</th>
+      <th>Emaildescription</th>
+      <th>Faxnumber</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @originators.each do |originator| %>
+      <tr>
+        <td><%= originator.originator_id %></td>
+        <td><%= originator.name %></td>
+        <td><%= originator.phonenumber %></td>
+        <td><%= originator.phonedescription %></td>
+        <td><%= originator.email %></td>
+        <td><%= originator.emaildescription %></td>
+        <td><%= originator.faxnumber %></td>
+        <td><%= button_to 'Show', originator, { :class=> 'btn btn-primary', :method => 'get' } %></td>
+        <td><%= button_to 'Edit', edit_originator_path(originator), { :class=> 'btn btn-default', :method => 'get' } %></td>
+        <td><%= button_to 'Destroy', originator, :class=> 'btn btn-danger', method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

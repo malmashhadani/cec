@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Originator:</strong>
+  <%= @originator.originator_id %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @originator.name %>
+</p>
+
+<p>
+  <strong>Phonenumber:</strong>
+  <%= @originator.phonenumber %>
+</p>
+
+<p>
+  <strong>Phonedescription:</strong>
+  <%= @originator.phonedescription %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @originator.email %>
+</p>
+
+<p>
+  <strong>Emaildescription:</strong>
+  <%= @originator.emaildescription %>
+</p>
+
+<p>
+  <strong>Faxnumber:</strong>
+  <%= @originator.faxnumber %>
+</p>
+
+<%= link_to 'Edit', edit_originator_path(@originator) %> |
+<%= link_to 'Back', originators_path %>

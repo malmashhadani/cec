@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  phyadd_id: 1
+  address: MyString
+  city: MyString
+  state: MyString
+  zipcode: 1
+  project_id: 1
+
+two:
+  phyadd_id: 1
+  address: MyString
+  city: MyString
+  state: MyString
+  zipcode: 1
+  project_id: 1

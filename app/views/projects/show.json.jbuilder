@@ -1,0 +1,1 @@
+json.extract! @project, :id, :project_id, :name, :description, :objective, :synopsis, :background, :comment, :url, :urldescription, :coursenumber, :coursedepartment, :coursenotes, :picture, :originator_id, :unit_id, :county_id, :zipcode_id, :created_at, :updated_at

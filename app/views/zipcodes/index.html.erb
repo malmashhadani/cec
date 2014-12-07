@@ -1,0 +1,31 @@
+<h1>Listing zipcodes</h1>
+
+<div class="row" style="padding:15px;">
+	<div class="col-md-12">
+    <%= button_to 'New Zipcode', new_zipcode_path, { :class=> 'btn btn-success', :method => 'get' } %>
+  </div>
+</div>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Zipcode</th>
+      <th>Zipcode</th>
+      <th>County</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @zipcodes.each do |zipcode| %>
+      <tr>
+        <td><%= zipcode.zipcode_id %></td>
+        <td><%= zipcode.zipcode %></td>
+        <td><%= zipcode.county_id %></td>
+        <td><%= button_to 'Show', zipcode, { :class=> 'btn btn-primary', :method => 'get' } %></td>
+        <td><%= button_to 'Edit', edit_zipcode_path(zipcode), { :class=> 'btn btn-default', :method => 'get' } %></td>
+        <td><%= button_to 'Destroy', zipcode, :class=> 'btn btn-danger', method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

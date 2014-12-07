@@ -1,0 +1,118 @@
+<!doctype html>
+<html>
+<head>
+	<title>New Mexico Map in D3</title>
+	 <link rel="stylesheet" href="style.css" type="text/css" />
+	<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+</head>
+<body>
+	<script>
+	var colorscale = d3.scale.category20c();
+	var colorscale2 = d3.scale.linear().range(["grey","black"]).interpolate(d3.interpolateHcl);
+	var color = d3.scale.linear().domain([0,60]).range(["blue","red"]);
+	var width = 1080, height = 950;
+    var active = d3.select(null);
+	var canvas = d3.select("body")
+					.append("svg")
+					.attr("width",width)
+					.attr("height",height);
+
+	var tooltip = d3.select("body")
+		.append("div")
+	    .attr("class", "tooltip")
+	    .attr("id","tooltip")
+		.text("Select County");
+
+// Change these to get proper view of the map. 
+// scale changes the size of the map. 
+// offset changes the [x,y] position in the canvas  
+	var scale  = 7000;
+	var offset = [550, 450];
+
+	var background = canvas.append("rect")
+	                .attr("class", "background")
+	                .attr("width", width)
+	                .attr("height", height)
+	                .on("click", reset);
+
+	d3.json("nm.json", function(data) {
+
+		var group = canvas.selectAll("g")
+							.data(data.features)
+							.enter()
+							.append("g")
+
+		var center = d3.geo.centroid(data);
+
+	  	var projection = d3.geo.mercator().center(center).scale(scale).translate(offset);
+
+	  	var path = d3.geo.path().projection(projection);
+
+		var areas = group.append("path")
+						.attr("d",path)
+	      				.attr("class", "feature")
+						.attr("fill",function(d) { return colorscale(d.properties.COUNTYFP00); })
+						.on("click",clicked);
+
+
+
+		var text =group.append("text")
+						.attr("x",function (d) {return path.centroid(d)[0]; })
+						.attr("y",function (d) {return path.centroid(d)[1]; })
+						.attr("class","text")
+						.text(function (d) {return d.properties.NAME00; })
+
+	});
+
+function clicked(d) {
+  if (active.node() === this) return reset();
+  active.classed("active", false);
+  active = d3.select(this).classed("active", true);
+  
+  tooltip.html(    //Populate tooltip text
+        '<div class="accordian_container"><b>Community engagement in ' + d.properties.NAME00 + ' county</b><hr/><br/><div class="accordian_item" id="accord_item_2"><label>Number of Projects : </label><br/><br/><label>Ongoing Projects :</label><br/><a href="#" class="accordian_trigger"><h5>See more...</h5></a><br/><br/><button type="button" onclick="">Start a new project here</button></div></div>'            
+  ).style("opacity",0.1)
+  .transition()
+  .duration(500)
+  .style("opacity",0.9);
+}
+
+function reset() {
+  active.classed("active", false);
+  active = d3.select(null);
+   tooltip.html(    //Populate tooltip text
+        'Select County'            
+  ).style("opacity",0.1)
+  .transition()
+  .duration(500)
+  .style("opacity",1);
+}
+
+
+	</script>
+<footer id="footer" class="midnight-blue">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    &copy; 2013 <a target="_blank" href="http://cec.unm.edu/" title="Community Engagement">UNIVERSITY OF NEW MEXICO. COMMUNITY ENGAGEMENT PORTAL</a>. All Rights Reserved.
+                </div>
+                <div class="col-sm-6">
+                    <ul class="pull-right">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Faq</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer><!--/#footer-->
+
+    <script src="javascripts/jquery.js"></script>
+    <script src="javascripts/bootstrap.min.js"></script>
+    <script src="javascripts/jquery.prettyPhoto.js"></script>
+    <script src="javascripts/jquery.isotope.min.js"></script>
+    <script src="javascripts/main.js"></script>
+    <script src="javascripts/wow.min.js"></script>
+</body>
+</html>

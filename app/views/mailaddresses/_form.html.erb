@@ -1,0 +1,89 @@
+<%= form_for(@mailaddress) do |f| %>
+  <% if @mailaddress.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@mailaddress.errors.count, "error") %> prohibited this mailaddress from being saved:</h2>
+
+      <ul>
+      <% @mailaddress.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <div class="row">
+      <div class="col-md-12">
+        <%= f.label :mailadd_id %>
+		  </div>
+	  </div>
+	  <div class="row">
+		  <div class="col-md-7 col-lg-4">
+			  <%= f.number_field :mailadd_id, { :class=> 'form-control' } %>
+      </div>
+    </div>
+  </div>
+  <div class="field">
+    <div class="row">
+      <div class="col-md-12">
+        <%= f.label :address %>
+		  </div>
+	  </div>
+	  <div class="row">
+		  <div class="col-md-7 col-lg-4">
+			  <%= f.text_field :address, { :class=> 'form-control' } %>
+      </div>
+    </div>
+  </div>
+  <div class="field">
+    <div class="row">
+      <div class="col-md-12">
+        <%= f.label :city %>
+		  </div>
+	  </div>
+	  <div class="row">
+		  <div class="col-md-7 col-lg-4">
+			  <%= f.text_field :city, { :class=> 'form-control' } %>
+      </div>
+    </div>
+  </div>
+  <div class="field">
+    <div class="row">
+      <div class="col-md-12">
+        <%= f.label :state %>
+		  </div>
+	  </div>
+	  <div class="row">
+		  <div class="col-md-7 col-lg-4">
+			  <%= f.text_field :state, { :class=> 'form-control' } %>
+      </div>
+    </div>
+  </div>
+  <div class="field">
+    <div class="row">
+      <div class="col-md-12">
+        <%= f.label :zipcode %>
+		  </div>
+	  </div>
+	  <div class="row">
+		  <div class="col-md-7 col-lg-4">
+			  <%= f.number_field :zipcode, { :class=> 'form-control' } %>
+      </div>
+    </div>
+  </div>
+  <div class="field">
+    <div class="row">
+      <div class="col-md-12">
+        <%= f.label :project_id %>
+		  </div>
+	  </div>
+	  <div class="row">
+		  <div class="col-md-7 col-lg-4">
+			  <%= f.number_field :project_id, { :class=> 'form-control' } %>
+      </div>
+    </div>
+  </div>
+  <div class="actions">
+    <%= f.submit class: 'btn btn-success' %>
+  </div>
+<% end %>

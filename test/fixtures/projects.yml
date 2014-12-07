@@ -1,0 +1,39 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  project_id: 1
+  name: MyString
+  description: MyString
+  objective: MyString
+  synopsis: MyString
+  background: MyString
+  comment: MyString
+  url: MyString
+  urldescription: MyString
+  coursenumber: MyString
+  coursedepartment: MyString
+  coursenotes: MyString
+  picture: MyString
+  originator_id: 1
+  unit_id: 1
+  county_id: 1
+  zipcode_id: 1
+
+two:
+  project_id: 1
+  name: MyString
+  description: MyString
+  objective: MyString
+  synopsis: MyString
+  background: MyString
+  comment: MyString
+  url: MyString
+  urldescription: MyString
+  coursenumber: MyString
+  coursedepartment: MyString
+  coursenotes: MyString
+  picture: MyString
+  originator_id: 1
+  unit_id: 1
+  county_id: 1
+  zipcode_id: 1
