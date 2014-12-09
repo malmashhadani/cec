@@ -16,6 +16,12 @@ Rails.application.routes.draw do
 
   get 'pages/map' => "pages#map"
 
+  get 'pages/contact' => "pages#contact"
+
+  get 'pages/courses' => "pages#courses"
+
+  get 'pages/research' => "pages#research"
+
   get 'welcome/index'
 
   resources :dots

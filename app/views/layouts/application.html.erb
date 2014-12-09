@@ -65,13 +65,13 @@
 				
                 <div class="collapse navbar-collapse navbar-right">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="/">Home</a></li>
-                        <li><a href="about-us.html">Courses</a></li>
-                        <li><a href="services.html">Research</a></li>
+                        <li <%request.original_url%>class="active"><a href="/">Home</a></li>
+                        <li><a href="/pages/courses">Courses</a></li>
+                        <li><a href="/pages/research">Research</a></li>
                         <li><%= link_to "Projects", projects_path %></li>
                         <li><a href="portfolio.html">Resources</a></li>
                         <li><a href="/pages/map">New Mexico Map</a></li>
-                        <li><a href="portfolio.html">Contact Us</a></li>
+                        <li><a href="/pages/contact">Contact Us</a></li>
                     </ul>
                 </div>
             </div><!--/.container-->
@@ -100,11 +100,11 @@
         </div>
     </footer><!--/#footer-->
 
-    <script src="/assets/javascripts/jquery.js"></script>
-    <script src="/assets/javascripts/bootstrap.min.js"></script>
-    <script src="/assets/javascripts/jquery.prettyPhoto.js"></script>
-    <script src="/assets/javascripts/jquery.isotope.min.js"></script>
-    <script src="/assets/javascripts/main.js"></script>
-    <script src="/assets/javascripts/wow.min.js"></script>
+    <script src="javascripts/jquery.js"></script>
+    <script src="javascripts/bootstrap.min.js"></script>
+    <script src="javascripts/jquery.prettyPhoto.js"></script>
+    <script src="javascripts/jquery.isotope.min.js"></script>
+    <script src="javascripts/main.js"></script>
+    <script src="javascripts/wow.min.js"></script>
 </body>
 </html>

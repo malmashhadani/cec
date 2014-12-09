@@ -1,19 +1,52 @@
-<p id="notice"><%= notice %></p>
+<div style="padding:15px;background:#ccc;">
+  <div class="row">
+    <div class="col-md-12">
+      <%= notice %>
+    </div>
+  </div>
 
-<p>
-  <strong>Zipcode:</strong>
-  <%= @zipcode.zipcode_id %>
-</p>
+  <div class="row">
+    <div class="col-md-12">
+      <h3>Zip Code ID:</h3>
+    </div>
+  </div>
 
-<p>
-  <strong>Zipcode:</strong>
-  <%= @zipcode.zipcode %>
-</p>
+  <div class="row">
+    <div class="col-md-12">
+      <%= @zipcode.zipcode_id %>
+    </div>
+  </div>
 
-<p>
-  <strong>County:</strong>
-  <%= @zipcode.county_id %>
-</p>
+  <div class="row">
+    <div class="col-md-12">
+      <h3>Zip Code:</h3>
+    </div>
+  </div>
 
-<%= link_to 'Edit', edit_zipcode_path(@zipcode) %> |
-<%= link_to 'Back', zipcodes_path %>
+  <div class="row">
+    <div class="col-md-12">
+      <%= @zipcode.zipcode %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <h3>County ID:</h3>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <%= @zipcode.county_id %>
+    </div>
+  </div>
+
+  <div class="row" style="margin-top:15px;">
+    <div class="col-md-1">
+      <%= button_to 'Edit', edit_zipcode_path(@zipcode), { :class=> 'btn btn-primary', :method => 'get' } %>
+    </div>
+    <div class="col-md-1">
+      <%= button_to 'Back', zipcodes_path, { :class=> 'btn btn-default', :method => 'get' } %>
+    </div>
+  </div>
+</div>

@@ -1,34 +1,88 @@
-<p id="notice"><%= notice %></p>
+<div style="padding:15px;background:#ccc;">
+  <div class="row">
+    <div class="col-md-12">
+      <%= notice %>
+    </div>
+  </div>
 
-<p>
-  <strong>Mailadd:</strong>
-  <%= @mailaddress.mailadd_id %>
-</p>
+  <div class="row">
+    <div class="col-md-12">
+      <h3>Mail Address ID:</h3>
+    </div>
+  </div>
 
-<p>
-  <strong>Address:</strong>
-  <%= @mailaddress.address %>
-</p>
+  <div class="row">
+    <div class="col-md-12">
+      <%= @mailaddress.mailadd_id %>
+    </div>
+  </div>
 
-<p>
-  <strong>City:</strong>
-  <%= @mailaddress.city %>
-</p>
+  <div class="row">
+    <div class="col-md-12">
+      <h3>Address:</h3>
+    </div>
+  </div>
 
-<p>
-  <strong>State:</strong>
-  <%= @mailaddress.state %>
-</p>
+  <div class="row">
+    <div class="col-md-12">
+      <%= @mailaddress.address %>
+    </div>
+  </div>
 
-<p>
-  <strong>Zipcode:</strong>
-  <%= @mailaddress.zipcode %>
-</p>
+  <div class="row">
+    <div class="col-md-12">
+      <h3>City:</h3>
+    </div>
+  </div>
 
-<p>
-  <strong>Project:</strong>
-  <%= @mailaddress.project_id %>
-</p>
+  <div class="row">
+    <div class="col-md-12">
+      <%= @mailaddress.city %>
+    </div>
+  </div>
 
-<%= link_to 'Edit', edit_mailaddress_path(@mailaddress) %> |
-<%= link_to 'Back', mailaddresses_path %>
+  <div class="row">
+    <div class="col-md-12">
+      <h3>State:</h3>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <%= @mailaddress.state %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <h3>Zip Code:</h3>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <%= @mailaddress.zipcode %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <h3>Project ID:</h3>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <%= @mailaddress.project_id %>
+    </div>
+  </div>
+
+  <div class="row" style="margin-top:15px;">
+    <div class="col-md-1">
+      <%= button_to 'Edit', edit_mailaddress_path(@mailaddress), { :class=> 'btn btn-primary', :method => 'get' } %>
+    </div>
+    <div class="col-md-1">
+      <%= button_to 'Back', mailaddresses_path, { :class=> 'btn btn-default', :method => 'get' } %>
+    </div>
+  </div>
+</div>

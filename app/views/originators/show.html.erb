@@ -1,39 +1,100 @@
-<p id="notice"><%= notice %></p>
+<div style="padding:15px;background:#ccc;">
+  <div class="row">
+    <div class="col-md-12">
+      <%= notice %>
+    </div>
+  </div>
 
-<p>
-  <strong>Originator:</strong>
-  <%= @originator.originator_id %>
-</p>
+  <div class="row">
+    <div class="col-md-12">
+      <h3>Originator ID:</h3>
+    </div>
+  </div>
 
-<p>
-  <strong>Name:</strong>
-  <%= @originator.name %>
-</p>
+  <div class="row">
+    <div class="col-md-12">
+      <%= @originator.originator_id %>
+    </div>
+  </div>
 
-<p>
-  <strong>Phonenumber:</strong>
-  <%= @originator.phonenumber %>
-</p>
+  <div class="row">
+    <div class="col-md-12">
+      <h3>Name:</h3>
+    </div>
+  </div>
 
-<p>
-  <strong>Phonedescription:</strong>
-  <%= @originator.phonedescription %>
-</p>
+  <div class="row">
+    <div class="col-md-12">
+      <%= @originator.name %>
+    </div>
+  </div>
 
-<p>
-  <strong>Email:</strong>
-  <%= @originator.email %>
-</p>
+  <div class="row">
+    <div class="col-md-12">
+      <h3>Phone Number:</h3>
+    </div>
+  </div>
 
-<p>
-  <strong>Emaildescription:</strong>
-  <%= @originator.emaildescription %>
-</p>
+  <div class="row">
+    <div class="col-md-12">
+      <%= @originator.phonenumber %>
+    </div>
+  </div>
 
-<p>
-  <strong>Faxnumber:</strong>
-  <%= @originator.faxnumber %>
-</p>
+  <div class="row">
+    <div class="col-md-12">
+      <h3>Phone Description:</h3>
+    </div>
+  </div>
 
-<%= link_to 'Edit', edit_originator_path(@originator) %> |
-<%= link_to 'Back', originators_path %>
+  <div class="row">
+    <div class="col-md-12">
+      <%= @originator.phonedescription %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <h3>Email:</h3>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <%= @originator.email %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <h3>Email Description:</h3>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <%= @originator.emaildescription %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <h3>Fax Number:</h3>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <%= @originator.faxnumber %>
+    </div>
+  </div>
+
+  <div class="row" style="margin-top:15px;">
+    <div class="col-md-1">
+      <%= button_to 'Edit', edit_originator_path(@originator), { :class=> 'btn btn-primary', :method => 'get' } %>
+    </div>
+    <div class="col-md-1">
+      <%= button_to 'Back', originators_path, { :class=> 'btn btn-default', :method => 'get' } %>
+    </div>
+  </div>
+</div>
